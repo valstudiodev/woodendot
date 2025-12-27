@@ -167,9 +167,9 @@
 
    // .subscription-body__button
    &__button {
-      @include adaptiveValue('font-size',15,12);
+      font-size: toRem(15);
       padding-block: toRem(5);
-      @include adaptiveValue('padding-inline',41,20);
+      padding-inline: toRem(40);
       border: toRem(1) solid $black;
       line-height: 1;
       @include adaptiveValue('margin-bottom',31,15);

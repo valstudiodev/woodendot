@@ -507,41 +507,13 @@ html[data-input=mouse] .column-menu__link:hover {
   margin-bottom: 0rem;
 }
 .subscription-body__button {
+  font-size: 0.9375rem;
   padding-block: 0.3125rem;
+  padding-inline: 2.5rem;
   border: 0.0625rem solid rgb(0, 0, 0);
   line-height: 1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-@media (min-width: 91.875em) {
-  .subscription-body__button {
-    font-size: 15px;
-  }
-}
-@media (min-width: 20em) and (max-width: 91.875em) {
-  .subscription-body__button {
-    font-size: clamp( 12px , 11.1652173913px  +  0.2608695652vw , 15px );
-  }
-}
-@media (max-width: 20em) {
-  .subscription-body__button {
-    font-size: 12px;
-  }
-}
-@media (min-width: 91.875em) {
-  .subscription-body__button {
-    padding-inline: 41px;
-  }
-}
-@media (min-width: 20em) and (max-width: 91.875em) {
-  .subscription-body__button {
-    padding-inline: clamp( 20px , 14.1565217391px  +  1.8260869565vw , 41px );
-  }
-}
-@media (max-width: 20em) {
-  .subscription-body__button {
-    padding-inline: 20px;
-  }
 }
 @media (min-width: 91.875em) {
   .subscription-body__button {
@@ -1175,12 +1147,20 @@ html[data-input=mouse] .item-product__link:hover {
   }
 }
 
+.slider-gallery {
+  padding-block: 3.125rem;
+}
 @media (max-width: 47.9375em) {
   .slider-gallery {
     margin-inline: -0.9375rem;
     padding-inline: 0.9375rem;
   }
 }
+.slider-gallery__slide {
+  background-position: center;
+  background-size: cover;
+}
+
 .slider-link {
   aspect-ratio: 367/550;
   overflow: hidden;

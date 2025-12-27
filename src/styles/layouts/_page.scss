@@ -293,7 +293,8 @@
 }
 
 .slider-gallery {
-
+   // width: 100%;
+   padding-block: toRem(50);
    @media (max-width: toEm(767)) {
       margin-inline: toRem(-15);
       padding-inline: toRem(15);
@@ -303,7 +304,10 @@
    &__wrapper {}
 
    // .slider-gallery__slide
-   &__slide {}
+   &__slide {
+      background-position: center;
+      background-size: cover;
+   }
 }
 
 .slider-link {
