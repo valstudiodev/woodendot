@@ -1,0 +1,98 @@
+@use '../settings/settings' as *;
+@use '../settings/mixins' as *;
+
+
+.header {
+   // display: none;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   @include adaptiveValue('padding-block',30,15);
+   transition: all 0.3s;
+   background-color: $white;
+
+   .scrolled {}
+
+   // .header__container
+   &__container {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue('gap',50,20);
+      justify-content: space-between;
+   }
+
+   // .header__menu
+   &__menu {}
+
+   &__logo {
+      position: relative;
+      @include adaptiveValue('width',190,130);
+      height: toRem(36);
+      z-index: 10;
+   }
+}
+
+.menu-header {
+
+   @media (max-width: toEm(460)) {
+     display: block;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     background-color: $bgFooter;
+     width: 100%;
+     height: 100%;
+     padding: toRem(100) toRem(15) toRem(30) toRem(15);
+     transition: all 0.3s;
+
+     .menu-open & {
+      right: 0;
+     }
+
+     &::before {
+       content: "";
+       position: fixed;
+       top: 0;
+       right: -100%;
+       background-color: $white;
+       width: 100%;
+       height: toRem(70);
+       transition: all 0.3s;
+
+       .menu-open & {
+         right: 0;
+       }
+     }
+   }
+
+   // .menu-header__list
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: toRem(20);
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      @media (max-width: toEm(460)) {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: toRem(30);
+      }
+   }
+
+   // .menu-header__item
+   &__item {
+      font-size: toRem(17);
+      line-height: 135.294118%; /* 23/17 */
+   }
+
+   // .menu-header__link
+   &__link {
+      transition: all 0.3s;
+      @include hover {
+         text-shadow: 0 0 3px $black;
+      }
+   }
+}
