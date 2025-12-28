@@ -57,12 +57,18 @@
    flex-direction: column;
    align-items: center;
    @include adaptiveValue('gap',45,20);
+
    // .column-menu__header
    &__header {
       display: flex;
       align-items: center;
       // @include adaptiveValue('margin-bottom', 45, 20);
-      gap: toRem(20)
+      gap: toRem(20);
+
+      @media (max-width: toEm(490)) {
+        justify-content: space-between;
+        width: 50%;
+      }
    }
 
    // .column-menu__title
@@ -85,8 +91,10 @@
       @media (max-width: toEm(490)) {
          height: 0;
          overflow: hidden;
+         align-items: flex-start;
+         width: 50%;
       }
-      @media (min-width: toEm(490)) {
+      @media (min-width: toEm(491)) {
          height: auto !important;
          overflow: visible;
       }
@@ -139,7 +147,7 @@
          translate: 0 -50%;
       }
 
-      @media (min-width: toEm(490)) {
+      @media (min-width: toEm(490.98)) {
          display: none;
       }
    }

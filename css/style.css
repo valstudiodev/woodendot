@@ -369,6 +369,14 @@ html[data-input=mouse] .menu-header__link:hover {
           align-items: center;
   gap: 1.25rem;
 }
+@media (max-width: 30.625em) {
+  .column-menu__header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+  }
+}
 .column-menu__title {
   line-height: 100%;
   text-transform: uppercase;
@@ -409,9 +417,13 @@ html[data-input=mouse] .menu-header__link:hover {
   .column-menu__list {
     height: 0;
     overflow: hidden;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
   }
 }
-@media (min-width: 30.625em) {
+@media (min-width: 30.6875em) {
   .column-menu__list {
     height: auto !important;
     overflow: visible;
@@ -474,7 +486,7 @@ html[data-input=mouse] .column-menu__link:hover {
   top: 50%;
   translate: 0 -50%;
 }
-@media (min-width: 30.625em) {
+@media (min-width: 30.68625em) {
   .column-menu__icon {
     display: none;
   }
